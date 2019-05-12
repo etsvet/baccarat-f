@@ -7,7 +7,7 @@ from pprint import pprint
 # COMBINE ^ ?
 # iteration
 
-client = MongoClient('mongodb://127.0.0.1:27017')ds
+client = MongoClient('mongodb://127.0.0.1:27017')
 
 class IterationsResource:
     def on_get(self, req, resp):
