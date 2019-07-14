@@ -1,0 +1,6 @@
+{
+  "name": "baccarat-client",
+  "short_name": "baccarat-client",
+  "start_url": "/",
+  "display": "standalone"
+}
