@@ -1,3 +1,6 @@
 env/
 .idea/
 *.pyc
+*.crt
+*.key
+*.pem

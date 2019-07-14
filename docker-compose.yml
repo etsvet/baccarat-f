@@ -6,3 +6,17 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: password
+  web:
+    image: nginx
+    # docker container names must be unique, so you cannot scale a service beyond 1 container,
+    # if you have specified a custom name
+    container_name: web
+    ports:
+      - "12345:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./client:/usr/share/nginx/html
+      - ./nginx-selfsigned.crt:/etc/ssl/certs/nginx-selfsigned.crt
+      - ./nginx-selfsigned.key:/etc/ssl/private/nginx-selfsigned.key
+      - ./dhparam.pem:/etc/nginx/dhparam.pem
+      - ./conf/nginx/snippets:/etc/nginx/snippets
