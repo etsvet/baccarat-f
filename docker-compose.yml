@@ -20,3 +20,9 @@ services:
       - ./nginx-selfsigned.key:/etc/ssl/private/nginx-selfsigned.key
       - ./dhparam.pem:/etc/nginx/dhparam.pem
       - ./conf/nginx/snippets:/etc/nginx/snippets
+    networks:
+      - backdoor
+      - default
+networks:
+  backdoor:
+    external: true

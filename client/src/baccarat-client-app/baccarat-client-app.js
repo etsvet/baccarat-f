@@ -1,5 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
+import { Menu } from '../components';
+
 /**
  * @customElement
  * @polymer
@@ -12,6 +14,7 @@ class BaccaratClientApp extends PolymerElement {
           display: block;
         }
       </style>
+      <b-menu></b-menu>
       <h2>Hello [[prop1]]!</h2>
     `;
   }

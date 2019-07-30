@@ -19,7 +19,7 @@ class BaccaratClientApp extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'baccarat-client-app'
+        value: 'bacarat-client-app'
       }
     };
   }
